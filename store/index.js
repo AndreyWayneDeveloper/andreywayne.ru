@@ -58,8 +58,8 @@ const store = () => new Vuex.Store({
         'gilmon',
         false,
         'gilmon',
-        'Муниципалитет 19-24',
-        'GILMON — это популярный сервис скидок с бесплатными купонами на актуальные предложения.',
+        'GILMON',
+        'GILMON — это популярный сервис скидок с бесплатными купонами на актуальные предложения',
         '/img/portfolio/gilmon.jpg',
         'Сайт купонов и скидок',
         'https://chelyabinsk.gilmon.ru/',
@@ -232,13 +232,13 @@ const store = () => new Vuex.Store({
         '/img/other/autoturbo.jpg',
         false
       ),
-      new OtherProjects (
-        'Правовая защита потребителей',
-        'Landing Page',
-        'http://pravo-chel.ru/',
-        '/img/other/pravo-chel.jpg',
-        false
-      ),
+      // new OtherProjects (
+      //   'Правовая защита потребителей',
+      //   'Landing Page',
+      //   'http://pravo-chel.ru/',
+      //   '/img/other/pravo-chel.jpg',
+      //   false
+      // ),
     ]
   },
   mutations: {

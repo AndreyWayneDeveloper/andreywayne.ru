@@ -10,7 +10,7 @@ export default styled.div`
   width: 80vw;
   min-height: 70vh;
   border: 2px solid transparent;
-  transition: all .7s ease-in-out, border 0s;
+  transition: all .4s ease-in-out, border 0s;
     & .image {
     position: absolute;
     left: 50%;
@@ -22,7 +22,7 @@ export default styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    transition: all .7s ease-in-out, opacity 0s;
+    transition: all .3s ease-in-out, opacity 0s;
   }
   @keyframes rotateText {
     from { transform: rotateY(0deg) }
@@ -41,7 +41,7 @@ export default styled.div`
     display: flex;
     justify-content: space-between;
     perspective: 650px;
-    transition: all .4s;
+    transition: all .3s;
     & span {
       font-family: 'GT Walsheim Pro Bold';
       color: white;

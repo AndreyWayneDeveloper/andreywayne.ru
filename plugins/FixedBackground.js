@@ -16,7 +16,7 @@ export default styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: all .7s ease-in-out, opacity 0s;
+    transition: all .3s ease-in-out, opacity 0s;
 
     &:hover {
       transform: scale(1.05);
@@ -25,7 +25,7 @@ export default styled.div`
 
   & .image-after {
     box-shadow: inset 100vw 100vh 0 100px rgba(255, 0, 0, 0.40);
-    transition: all 1s;
+    transition: all .3s;
     opacity: 0;
     content: "";
     display: block;

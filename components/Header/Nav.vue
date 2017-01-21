@@ -3,6 +3,7 @@
   .contain
     ul
       li(v-for='(item, index) in portfolio' :class='{ active: item.active}' @click='navigation(index)')
+        span {{ item.title }}
 </template>
 
 <script>
@@ -50,7 +51,6 @@ export default {
   transform: translateY(-50%);
   @media screen and (max-width:1000px) {
     margin-right: 0px;
-    width: 20px;
   }
 
   & .contain {
@@ -72,13 +72,39 @@ export default {
     height: 100%;
   }
   li {
-    margin-bottom: 15px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #30373c;
+    position: relative;
+    width: 150px;
+    height: 35px;
     cursor: pointer;
-    transition: all .4s;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'GT Walsheim Pro Medium';
+      font-size: 14px;
+      opacity: 0;
+      text-align: center;
+      width: 150px;
+      transition: all .4s;
+    }
+    &:hover:after {
+      width: 0;
+    }
+    &:hover span {
+      opacity: 1;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15px;
+      height: 2px;
+      background: #30373c;
+      transition: all .3s;
+    }
 
     @media screen and (max-height:450px) {
       width: 15px;
@@ -87,7 +113,13 @@ export default {
     }
   }
   .active {
-    background: #ee394e;
+    &:after {
+      background: #ee394e;
+      width: 60px;
+    }
+    & span {
+      color: #ee394e;
+    }
   }
 }
 </style>

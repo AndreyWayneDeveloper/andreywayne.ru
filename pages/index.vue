@@ -15,7 +15,7 @@ div
       div#fixedTitle(v-if='!other')
         span(v-for='(item, index) in fixedText') {{ item }}
   main#main
-  <h1 class='main-title'>JavaScript developer<br /> Frontend разработчик <br />web программист</h1>
+  <h1 class='main-title'>Профессиональная<br /> разработка сайтов <br />любой сложности</h1>
   div(@click='scrollInPortfolio').nav-project
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="20" height="64" viewBox="0 0 20 64">
       <path d="M0.790,56.905 L10.030,63.877 L19.270,56.905 " transform="translate(0.25)" class="cls-1"></path>
@@ -315,12 +315,11 @@ h1 {
   top: 50%;
   left: 20vw;
   color: #2f3b44;
-  text-transform: uppercase;
   transform: translateY(-50%);
   z-index: 5;
   font-family: 'GT Walsheim Pro Bold';
   font-size: 52px;
-  line-height: 80px;
+  line-height: 70px;
 
   @media screen and (max-width:1100px) {
     font-size: 35px;

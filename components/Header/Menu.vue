@@ -10,6 +10,12 @@ transition(name="translateX")
           nuxt-link.middle(to='/other-projects' exact) Другое
         li(@click='exit')
           nuxt-link(to='/about' exact) Обо мне
+    .social
+      .icons
+        a(target='_blank' href='https://vk.com/killwayne').vk.soc
+        a(target='_blank' href='https://www.instagram.com/andrey_5000nuley/?hl=ru').inst.soc
+        a(target='_blank' href='https://t-do.ru/masterwaynejs').tel.soc
+      a(href="mailto:developer@andreywaynе.ru").email Email: <span class='span'> // </span> <span>developer@andreywaynе.ru</span>
 </template>
 
 <script>
@@ -30,6 +36,62 @@ export default {
 </script>
 
 <style lang='less' scoped>
+.social {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    font-family: 'GT Walsheim Pro Medium';
+    font-size: 20px;
+    color: white;
+    &:hover {
+      span {
+        color: #ee394e;
+      }
+    }
+    span {
+      transition: all .4s;
+    }
+    & .span {
+      color: #ee394e;
+    }
+  }
+  .icons {
+    display: flex;
+  }
+  .soc {
+    width: 44px;
+    height: 44px;
+    margin-right: 20px;
+    transition: all .4s;
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 0 0 15px white;
+    }
+  }
+  .vk {
+    background: url(/img/vk.svg) no-repeat center;
+  }
+  .inst {
+    background: url(/img/inst.svg) no-repeat center;
+  }
+  .tel {
+    background: url(/img/tel.svg) no-repeat center;
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .email {
+      display: none;
+    }
+  }
+}
 .menu {
   position: fixed;
   left: 0;

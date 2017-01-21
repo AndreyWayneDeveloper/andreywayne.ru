@@ -51,7 +51,7 @@ div
               span CSS3
               span SVG
               span Less
-              span Sass
+              span Sass(Scss)
               span Bootstrap 4
               span Materialize
             li
