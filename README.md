@@ -1,1 +1,0 @@
-# andreywayne.ru
