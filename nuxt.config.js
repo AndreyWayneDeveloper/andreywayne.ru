@@ -6,14 +6,6 @@ module.exports = {
     color: '#ee394e',
     height: '5px'
   },
-  modules: [
-    '@nuxtjs/proxy'
-  ],
-
-  proxy: {
-    '/message': 'http://localhost:9000/message'
-  },
-
   plugins: [
     { src:'~/plugins/MaskedInput.js', ssr: false },
     { src: '~plugins/ga.js', ssr: false }
