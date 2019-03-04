@@ -212,6 +212,13 @@ const store = () => new Vuex.Store({
     ],
     otherProjects: [
       new OtherProjects (
+        'Фотокартины на холсте',
+        'Landing Page',
+        'https://orenburgholst.ru',
+        '/img/other/holst.jpg',
+        false
+      ),
+      new OtherProjects (
         'Сайт для быстрого заказа бетона',
         'Корпоративный сайт',
         'https://my-beton.ru/',
@@ -230,6 +237,13 @@ const store = () => new Vuex.Store({
         'Landing Page',
         'https://www.74autoturbo.ru/',
         '/img/other/autoturbo.jpg',
+        false
+      ),
+      new OtherProjects (
+        'Парковка в центре города Ставрополя',
+        'Landing Page',
+        'https://stavparking.ru/',
+        '/img/other/parkovka.jpg',
         false
       ),
       // new OtherProjects (
