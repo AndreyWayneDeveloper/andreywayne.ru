@@ -1,6 +1,6 @@
 <template lang='pug'>
 transition(name="fade")
-  .preloader(v-if='show')
+  .preloader(v-if='false')
     div.img(
       v-for="(item, index) in images"
       :alt='item.title'

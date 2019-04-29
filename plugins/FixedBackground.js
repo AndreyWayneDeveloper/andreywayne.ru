@@ -24,7 +24,7 @@ export default styled.div`
   }
 
   & .image-after {
-    box-shadow: inset 100vw 100vh 0 100px rgba(255, 0, 0, 0.40);
+    box-shadow: inset 100vw 100vh 0 100px rgba(217, 242, 255, .4);
     transition: all .3s;
     opacity: 0;
     content: "";

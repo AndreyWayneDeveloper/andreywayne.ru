@@ -8,7 +8,8 @@ module.exports = {
   },
   plugins: [
     { src:'~/plugins/MaskedInput.js', ssr: false },
-    { src: '~plugins/ga.js', ssr: false }
+    { src: '~plugins/ga.js', ssr: false },
+    { src: '~/plugins/video.js', ssr: false }
   ],
   cashe: true,
   head: {

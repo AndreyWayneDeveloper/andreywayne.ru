@@ -5,13 +5,14 @@ Vue.use(Vuex)
 
 class Project {
   constructor(
-    title, text, image, backgroundColors, routerLink,
+    title, text, image, backgroundColors, backgroundPrev, routerLink,
     routerNext, active, params, head, context, background,
     type, url, color) {
       this.title = title
       this.text = text
       this.image = image
       this.backgroundColors = backgroundColors
+      this.backgroundPrev = backgroundPrev
       this.routerLink = routerLink
       this.routerNext = routerNext
       this.active = active
@@ -53,7 +54,8 @@ const store = () => new Vuex.Store({
         'IT система «Муниципал»',
         ['Система', 'для органов', 'местного самоуправления'],
         '/img/portfolio/municipal.jpg',
-        'rgba(16, 0, 255, 0.40)',
+        'rgb(red, 0.40)',
+        'rgba(217, 242, 255, 1);',
         '/projects/mopushkin',
         'mopushkin',
         false,
@@ -69,7 +71,8 @@ const store = () => new Vuex.Store({
         'Муниципалитет 19-24',
         ['Муниципалитет', 'нового', 'поколения'],
         '/img/portfolio/mo1924.jpg',
-        'rgba(0, 155, 255, 0.40)',
+        'rgba(217, 242, 255, .4);',
+        'rgba(0, 187, 0, 0.40)',
         '/projects/mo1924',
         'mo1924',
         false,
@@ -86,6 +89,7 @@ const store = () => new Vuex.Store({
         ['Популярный сервис', 'скидок с бесплатными', 'купонами'],
         '/img/portfolio/gilmon.jpg',
         'rgba(0, 187, 0, 0.40)',
+        'rgba(212, 212, 212, 0.60)',
         '/projects/gilmon',
         'gilmon',
         false,
@@ -102,6 +106,7 @@ const store = () => new Vuex.Store({
         ['Гастрономический пивной', 'ресторан с интерьером', 'в стиле стимпанк'],
         '/img/portfolio/max.jpg',
         'rgba(212, 212, 212, 0.60)',
+        'rgba(0, 255, 174, 0.40)',
         '/projects/mad-m',
         'mad-m',
         false,
@@ -118,6 +123,7 @@ const store = () => new Vuex.Store({
         ['Клиника похудения', 'и снижения веса', 'в Санкт-Петербурге'],
         '/img/portfolio/apecsmed.png',
         'rgba(0, 255, 174, 0.40)',
+        'rgba(153, 184, 255, 0.40)',
         '/projects/apecsmed',
         'apecsmed',
         false,
@@ -134,6 +140,7 @@ const store = () => new Vuex.Store({
         ['Транспортный', 'информационно', '- аналитический портал'],
         '/img/portfolio/tiap.jpg',
         'rgba(153, 184, 255, 0.40)',
+        'rgba(64, 81, 181, 0.4)',
         '/projects/tiap',
         'tiap',
         false,
@@ -150,6 +157,7 @@ const store = () => new Vuex.Store({
         ['Сайт', 'сети', 'ресторанов'],
         '/img/portfolio/reca.jpg',
         'rgba(64, 81, 181, 0.4)',
+        'rgba(255, 235, 59, 0.40)',
         '/projects/reca',
         'reca',
         false,
@@ -166,6 +174,7 @@ const store = () => new Vuex.Store({
         ['Демонтаж зданий', 'и сооружений', 'в Санкт-петербурге'],
         '/img/portfolio/yaro-stroy.png',
         'rgba(255, 235, 59, 0.40)',
+        'rgba(228, 94, 245, 0.40)',
         '/projects/yaro-stroy',
         'yaro-stroy',
         false,
@@ -182,6 +191,7 @@ const store = () => new Vuex.Store({
         ['Интернет-магазин', 'спортивного питания', 'Пик Формы'],
         '/img/portfolio/pikformi.jpg',
         'rgba(228, 94, 245, 0.40)',
+        'rgba(214, 117, 117, 0.4)',
         '/projects/peak-form',
         'peak-form',
         false,
@@ -198,6 +208,7 @@ const store = () => new Vuex.Store({
         ['Проектирование', 'и строительство', 'железных дорог'],
         '/img/portfolio/sfera-stroy.jpg',
         'rgba(214, 117, 117, 0.4)',
+        'rgba(33, 150, 243, 0.40)',
         '/projects/sfera-stroy',
         'sfera-stroy',
         false,
@@ -214,6 +225,7 @@ const store = () => new Vuex.Store({
         ['Франшиза', 'федеральной сети', 'клининговых услуг'],
         '/img/portfolio/expert-klining.jpg',
         'rgba(33, 150, 243, 0.40)',
+        'rgba(214, 117, 117, 0.4)',
         '/projects/expert-klining',
         'expert-klining',
         false,

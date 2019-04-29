@@ -7,7 +7,7 @@ div
   transition(name="fade")
     Nav(:portfolio='portfolio' v-if='!other')
   FixedBackground
-    .image-after(:style="{ boxShadow: 'inset 100vw 100vh 0 100px' + portfolio[0].backgroundColors }")
+    .image-after
     .image#fixed-image
   FixedFrame#fixed-frame
     .image
@@ -21,18 +21,20 @@ div
       <path d="M0.790,56.905 L10.030,63.877 L19.270,56.905 " transform="translate(0.25)" class="cls-1"></path>
       <path d="M10,0 L10,63"></path>
     </svg>
-  IndexContainer(v-for='(item, index) in portfolio' :key='index' :id='index')
+  IndexContainer(v-for='(item, index) in portfolio' :key='index' :id='index' :style='{ background: `linear-gradient(${ item.backgroundColors } 0%, ${ item.backgroundPrev } 100%)`}')
     .container
       PortfolioElement.projectElem(
         :style="{ background: 'url(' + item.image + ') no-repeat top center', backgroundSize: 'cover'}")
         .imageBack(:style="{ background: 'url(' + item.image + ') no-repeat top center', backgroundSize: 'cover'}" @click='redirectProject(item, index)'
         )
           <h5> Смотреть <span>проект</span> <img src="/img/arrow.png" alt='arrow' title='arrow'></h5>
-        .title
-          h2 {{ item.title }}
-          h3 {{ item.text[0] }}
-          h3 {{ item.text[1] }}
-          h3 {{ item.text[2] }}
+          .title
+            Parallax
+              ParallaxElement(factor='.5')
+                h2 {{ item.title }}
+                h3 {{ item.text[0] }}
+                h3 {{ item.text[1] }}
+                h3 {{ item.text[2] }}
   section.other#other
     transition(name="zoom")
       .other-container(v-if='otherNext')
@@ -57,6 +59,8 @@ import PortfolioElement from '~/plugins/PortfolioElement.js'
 import Nav from '~/components/Header/Nav.vue'
 import Menu from '~/components/Header/Menu.vue'
 import Preloader from '~/components/Preloader.vue'
+import Parallax from '~/components/Parallax.vue'
+import ParallaxElement from '~/components/ParallaxElement.vue'
 import $ from 'jquery'
 
 export default {
@@ -96,7 +100,9 @@ export default {
     IndexContainer,
     PortfolioElement,
     Menu,
-    Preloader
+    Preloader,
+    Parallax,
+    ParallaxElement
   },
   data() {
     return {
@@ -148,15 +154,15 @@ export default {
       $('html, body').animate({ scrollTop: $(window).height() }, 700)
     },
     backgroundcolor (item, i) {
-      var wTop = $(window).scrollTop()
-      var wHeight = $(window).height()
-      var wCoordsBottom = wTop + wHeight
-
-      if (wCoordsBottom >= item.mid) {
-        $('.image-after').css({
-          boxShadow: 'inset 100vw 100vh 0 100px ' + this.portfolio[i].backgroundColors
-        })
-      }
+      // var wTop = $(window).scrollTop()
+      // var wHeight = $(window).height()
+      // var wCoordsBottom = wTop + wHeight
+      //
+      // if (wCoordsBottom >= item.mid) {
+      //   $('.image-after').css({
+      //     boxShadow: 'inset 100vw 100vh 0 100px ' + this.portfolio[i].backgroundColors
+      //   })
+      // }
     },
     redirectProject (item, i) {
       var elCoordsTop = $(`#${ i }`).offset().top

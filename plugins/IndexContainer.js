@@ -7,6 +7,7 @@ export default styled.section`
   z-index: 100;
   min-height: 100vh;
   width: 100%;
+  background-size: cover;
   & .container {
     position: relative;
     min-height: 100vh;
