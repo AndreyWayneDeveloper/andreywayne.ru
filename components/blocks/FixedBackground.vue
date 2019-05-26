@@ -33,12 +33,10 @@ import H1 from '~/plugins/H1'
 import H2 from '~/plugins/H2'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Parallax from 'vue-parallaxy'
 export default {
   components: {
     H1,
-    H2,
-    Parallax
+    H2
   },
   mounted() {
       var module = global.noise = {};

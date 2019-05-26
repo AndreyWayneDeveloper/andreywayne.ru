@@ -15,7 +15,6 @@ div
 <script>
 import { Wrapper, Container, Section } from '~/plugins/Common'
 import Main from '~/components/blocks/Main'
-import Parallax from 'vue-parallaxy'
 import MainTitle from '~/components/blocks/MainTitle'
 import { ParallaxContainer, ParallaxElement } from 'vue-mouse-parallax'
 import 'aos/dist/aos.css'
@@ -24,11 +23,10 @@ import Projects from '~/components/blocks/Projects'
 import Us from '~/components/blocks/Us'
 import Logo from '~/components/elements/Logo'
 import AOS from 'aos'
-import $ from 'jquery'
 export default {
   data() {
     return {
-      preloader: true,
+      preloader: false,
       projects: [
         {
           title: 'IT система муниципал',
@@ -65,18 +63,17 @@ export default {
   },
   mounted() {
     AOS.init()
-    $(document).ready(() => {
-      setTimeout(() => {
-        this.preloader = false
-      }, 3000)
-    })
+    // $(document).ready(() => {
+    //   setTimeout(() => {
+    //     this.preloader = false
+    //   }, 3000)
+    // })
   },
   components: {
     Wrapper,
     Container,
     Section,
     Main,
-    Parallax,
     MainTitle,
     ParallaxElement,
     ParallaxContainer,
