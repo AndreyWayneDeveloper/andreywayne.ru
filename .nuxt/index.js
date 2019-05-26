@@ -12,6 +12,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 import nuxt_plugin_vuetify_3e61940a from 'nuxt_plugin_vuetify_3e61940a' // Source: ./vuetify.js (mode: 'all')
 import nuxt_plugin_Parallax_4a2df7aa from 'nuxt_plugin_Parallax_4a2df7aa' // Source: ../plugins/Parallax.js (mode: 'client')
+import nuxt_plugin_ga_fb0a2534 from 'nuxt_plugin_ga_fb0a2534' // Source: ../plugins/ga.js (mode: 'client')
 
 // Component: <NoSsr>
 Vue.component(NoSsr.name, NoSsr)
@@ -136,6 +137,10 @@ async function createApp(ssrContext) {
 
   if (process.client && typeof nuxt_plugin_Parallax_4a2df7aa === 'function') {
     await nuxt_plugin_Parallax_4a2df7aa(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_ga_fb0a2534 === 'function') {
+    await nuxt_plugin_ga_fb0a2534(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

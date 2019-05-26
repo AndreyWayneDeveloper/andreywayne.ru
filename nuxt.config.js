@@ -47,6 +47,7 @@ module.exports = {
  ],
  plugins: [
    { src: '~/plugins/Parallax.js', ssr: false},
+   { src: '~plugins/ga.js', ssr: false }
  ],
   /*
   ** Customize the progress bar color
