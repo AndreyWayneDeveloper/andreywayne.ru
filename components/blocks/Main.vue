@@ -476,7 +476,7 @@ export default {
 }
 .main {
   position: relative;
-  background: url(/img/W.svg) no-repeat center;
+  background: url(/img/W.png) no-repeat center;
   background-size: 80vh auto;
 }
 

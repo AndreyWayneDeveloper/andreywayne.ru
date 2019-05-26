@@ -1,7 +1,7 @@
 import styled, { css } from 'vue-styled-components'
 
 export default styled.h1`
-  font-family: MagistralCond-ExtraBold;
+  font-family: Extra-Bold;
   font-size: 10vh;
   color: white;
   letter-spacing: 0.5px;

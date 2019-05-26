@@ -98,4 +98,12 @@ p {
 .wrapper {
    min-height: 100vh;
 }
+
+.preloader {
+  width: 100%;
+  height: 100px;
+  background: white;
+  position: fixed;
+  z-index: 111111111111;
+}
 </style>
