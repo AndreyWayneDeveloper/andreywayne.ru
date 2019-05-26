@@ -26,7 +26,7 @@ import AOS from 'aos'
 export default {
   data() {
     return {
-      preloader: false,
+      preloader: true,
       projects: [
         {
           title: 'IT система муниципал',
@@ -61,13 +61,17 @@ export default {
       ]
     }
   },
+  methods: {
+    close() {
+      this.preloader = false
+    }
+  },
   mounted() {
+    // document.addEventListener("DOMContentLoaded", this.close)
     AOS.init()
-    // $(document).ready(() => {
-    //   setTimeout(() => {
-    //     this.preloader = false
-    //   }, 3000)
-    // })
+    setTimeout(() => {
+      this.close()
+    }, 2000)
   },
   components: {
     Wrapper,
