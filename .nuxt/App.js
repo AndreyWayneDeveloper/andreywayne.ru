@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
-import '../node_modules/vuetify/dist/vuetify.css'
+import '../assets/main.css'
 
 import _6f6c098b from '../layouts/default.vue'
 
 const layouts = { "_default": _6f6c098b }
 
 export default {
-  head: {"htmlAttrs":{"lang":"ru"},"title":"Andrey Wayne","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"image","content":"\u002Fimg\u002FmainIndex.jpg"},{"http-equiv":"x-dns-prefetch-control","content":"on"},{"http-equiv":"cache-control","content":"no-cache"},{"http-equiv":"expires","content":0},{"http-equiv":"content-language","content":"ru"},{"property":"og:locale","content":"ru_Ru"},{"property":"og:image","content":"http:\u002F\u002Fandreywayne.ru\u002Fimg\u002Fsocial_image.jpg"},{"name":"DC.Title","content":"Andrey Wayne | Разработка сайтов"},{"name":"DC.Creator","content":"Andrey Wayne"},{"name":"DC.Subject","content":"Фриланс. Программирование. Создание сайтов."},{"name":"DC.Description","content":"Сайт портфолио JavaScript разработчика, HTML - верстальщика, Web программиста, Фрилансера программиста, Фрилансера разработчика. Разработка сайтов, интернет-магазинов, под ключ, SEO продвижение"},{"name":"DC.Publisher","content":"Andrey Wayne"},{"name":"DC.Contributor","content":"AndeyWayne"},{"name":"DC.Date","content":"2018"},{"name":"DC.Type","content":"Developer"},{"name":"DC.Format","content":"Developer"},{"name":"DC.Identifier","content":"http:\u002F\u002Fandreywayne.ru"},{"name":"DC.Source","content":"http:\u002F\u002Fandreywayne.ru"},{"name":"DC.Language","content":"Ru"},{"name":"DC.Coverage","content":"Andrey Wayne"},{"name":"DC.Rights","content":"Andrey Wayne"}],"link":[{"rel":"shortcut icon","type":"image\u002Fpng","href":"favicon.png"},{"rel":"stylesheet","type":"text\u002Fcss","href":"\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:300,400,500,700|Material+Icons"}],"style":[],"script":[]},
+  head: {"htmlAttrs":{"lang":"ru"},"title":"Andrey Wayne","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"image","content":"\u002Fimg\u002FmainIndex.jpg"},{"http-equiv":"x-dns-prefetch-control","content":"on"},{"http-equiv":"cache-control","content":"no-cache"},{"http-equiv":"expires","content":0},{"http-equiv":"content-language","content":"ru"},{"property":"og:locale","content":"ru_Ru"},{"property":"og:image","content":"http:\u002F\u002Fandreywayne.ru\u002Fimg\u002Fsocial_image.jpg"},{"name":"DC.Title","content":"Andrey Wayne | Разработка сайтов"},{"name":"DC.Creator","content":"Andrey Wayne"},{"name":"DC.Subject","content":"Фриланс. Программирование. Создание сайтов."},{"name":"DC.Description","content":"Сайт портфолио JavaScript разработчика, HTML - верстальщика, Web программиста, Фрилансера программиста, Фрилансера разработчика. Разработка сайтов, интернет-магазинов, под ключ, SEO продвижение"},{"name":"DC.Publisher","content":"Andrey Wayne"},{"name":"DC.Contributor","content":"AndeyWayne"},{"name":"DC.Date","content":"2018"},{"name":"DC.Type","content":"Developer"},{"name":"DC.Format","content":"Developer"},{"name":"DC.Identifier","content":"http:\u002F\u002Fandreywayne.ru"},{"name":"DC.Source","content":"http:\u002F\u002Fandreywayne.ru"},{"name":"DC.Language","content":"Ru"},{"name":"DC.Coverage","content":"Andrey Wayne"},{"name":"DC.Rights","content":"Andrey Wayne"}],"link":[{"rel":"shortcut icon","type":"image\u002Fpng","href":"favicon.png"}],"style":[],"script":[]},
 
   render(h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
@@ -39,10 +39,7 @@ export default {
       domProps: {
         id: '__nuxt'
       }
-    }, [
-      loadingEl,
-      transitionEl
-    ])
+    }, [loadingEl, transitionEl])
   },
   data: () => ({
     isOnline: true,

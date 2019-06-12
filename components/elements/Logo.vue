@@ -1,5 +1,6 @@
 <template lang='pug'>
-img(src='/img/logo.png')
+.logo
+  nuxt-link(to='/')
 </template>
 
 <script>
@@ -8,14 +9,21 @@ export default {
 </script>
 
 <style scoped lang='less'>
-img {
+.logo {
+  display: flex;
+  top: 1rem;
+  right: 1rem;
   position: fixed;
-  top: 25px;
-  left: 75px;
-  z-index: 1000000000;
-  @media screen and (max-width: 1279px) {
-    left: 10px;
-    top: 10px;
+  height: 38px;
+  width: 38px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000000000000000000;
+  a {
+    width: 33px;
+    height: 33px;
+    background: url(/img/logo.png) no-repeat center;
+    background-size: contain;
   }
 }
 </style>

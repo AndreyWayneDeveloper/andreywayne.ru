@@ -42,17 +42,13 @@ module.exports = {
   script: [
     { src: 'gsap/TweenMax.min.js' },
   ],
-  modules: [
-   '@nuxtjs/vuetify'
- ],
- plugins: [
-   { src: '~/plugins/Parallax.js', ssr: false},
-   { src: '~plugins/ga.js', ssr: false }
+  css: [
+   'assets/main.css'
  ],
   /*
   ** Customize the progress bar color
   */
-  loading: true,
+  loading: { color: '#3B8070' },
   /*
   ** Build configuration
   */
