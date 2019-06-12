@@ -5,8 +5,9 @@
   h4.content__subtitle
     a(:href='link' target='_blank') {{ link }}
   .content__text
-    .content__text-col {{ review }}
-    .content__text-col {{ stack }}
+    .content__text-col О проекте: {{ review }}
+    .content__text-col Пару слов: {{ stack }}
+    .content__text-col Стек технологий: {{ tech }}
 </template>
 
 <script>
@@ -16,7 +17,8 @@ export default {
     'title',
     'link',
     'review',
-    'stack'
+    'stack',
+    'tech'
   ]
 }
 </script>
@@ -28,8 +30,15 @@ export default {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
+    line-height: 22px;
+    text-align: left;
+    font-size: 15px;
     &:last-child {
       margin-bottom: 0;
+    }
+    @media screen and (max-height: 800px) {
+      font-size: 12px;
+      line-height: 18px;
     }
   }
 }

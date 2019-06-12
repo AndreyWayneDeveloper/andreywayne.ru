@@ -422,13 +422,12 @@ export default {
                 this.prevSlide.setLeft();
             }
             initEvents() {
-                // Clicking the next and previous slide starts the navigation / clicking the current shows its content..
                 this.clickFn = (slide) => {
                     if ( slide.isPositionedRight() ) {
-                        this.navigate('next');
+                        this.navigate('next'); // после
                     }
                     else if ( slide.isPositionedLeft() ) {
-                        this.navigate('prev');
+                        this.navigate('prev'); //до
                     }
                     else {
                         this.showContent();

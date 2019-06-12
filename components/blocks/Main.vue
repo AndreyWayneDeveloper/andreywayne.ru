@@ -22,6 +22,7 @@ div
         :link='item.link'
         :review='item.review'
         :stack='item.stack'
+        :tech='item.tech'
       )
       NavClose
 </template>

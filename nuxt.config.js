@@ -9,10 +9,10 @@ module.exports = {
     htmlAttrs: {
       lang: 'ru',
     },
-    title: 'Andrey Wayne',
+    title: 'Andrey Wayne | Разработка сайтов',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0' },
       { name: 'image', content: '/img/mainIndex.jpg' },
       { 'http-equiv': 'x-dns-prefetch-control', content: 'on' },
       { 'http-equiv': 'cache-control', content: 'no-cache' },
@@ -23,7 +23,7 @@ module.exports = {
       { name:"DC.Title", content: "Andrey Wayne | Разработка сайтов" },
       { name:"DC.Creator", content: "Andrey Wayne" },
       { name:"DC.Subject", content: "Фриланс. Программирование. Создание сайтов." },
-      { name:"DC.Description", content: "Сайт портфолио JavaScript разработчика, HTML - верстальщика, Web программиста, Фрилансера программиста, Фрилансера разработчика. Разработка сайтов, интернет-магазинов, под ключ, SEO продвижение" },
+      { name:"DC.Description", content: "Делаю IT-системы, новостные порталы, сервисы, интернет-магазины, лендинги, сайты компаний." },
       { name:"DC.Publisher", content: "Andrey Wayne" },
       { name:"DC.Contributor", content: "AndeyWayne" },
       { name:"DC.Date", content: "2018" },
@@ -44,6 +44,9 @@ module.exports = {
   ],
   css: [
    'assets/main.css'
+ ],
+ plugins: [
+   { src: '~plugins/ga.js', ssr: false }
  ],
   /*
   ** Customize the progress bar color

@@ -219,11 +219,20 @@ a:focus {
 	pointer-events: none;
 	transition: transform 0.8s, opacity 0.8s;
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  @media screen and (max-width: 800px) {
+    width: 2rem;
+    height: 2rem;
+    svg {
+      width: 1rem;
+    }
+  }
 }
 
 .nav--next {
 	bottom: 1rem;
 	right: 1rem;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 .icon--navarrow-next {
@@ -233,6 +242,8 @@ a:focus {
 .nav--prev {
 	top: 1rem;
 	left: 1rem;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 .icon--navarrow-prev {
@@ -332,7 +343,7 @@ a:focus {
 
 .content__close {
 	position: absolute;
-	top: 1rem;
+	top: -2rem;
 	left: 1rem;
 	background: none;
 	color: currentColor;
