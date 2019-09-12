@@ -1,5 +1,5 @@
 <template lang='pug'>
-div
+div.index__page
   Logo
   Menu
   Main

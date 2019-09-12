@@ -71,6 +71,7 @@
       </a></li>
     </ul>
   </div>
+  <Preloader></Preloader>
 </div>
 </template>
 
@@ -79,6 +80,7 @@ import TweenMax from 'gsap'
 import charming from 'charming'
 import Logo from '~/components/elements/Logo'
 import Menu from '~/components/elements/Menu'
+import Preloader from '~/components/elements/Preloader'
 
 export default {
   mounted() {
@@ -278,7 +280,8 @@ export default {
   },
   components: {
     Logo,
-    Menu
+    Menu,
+    Preloader
   }
 }
 </script>

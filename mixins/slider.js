@@ -1,6 +1,8 @@
 import TweenMax from 'gsap'
 import charming from 'charming'
 import imagesLoaded from 'imagesloaded'
+import mousewheel from 'jquery-mousewheel'
+import $ from 'jquery'
 export default {
   mounted() {
     document.documentElement.className = 'js'
@@ -422,6 +424,49 @@ export default {
                 this.prevSlide.setLeft();
             }
             initEvents() {
+              let topS = () => {
+                this.navigate('next')
+              }
+              let botS = () => {
+                this.navigate('prev')
+              }
+              var wheeldelta = {
+                x: 0,
+                y: 0
+              };
+              var wheeling;
+              $(window).on('mousewheel', function (e) {
+              if (!wheeling) {
+                if (e.deltaY > 0) {
+                  topS()
+                } else {
+                  botS()
+                }
+              }
+
+              clearTimeout(wheeling);
+              wheeling = setTimeout(function() {
+                wheeling = undefined;
+
+                wheeldelta.x = 0;
+                wheeldelta.y = 0;
+              }, 250);
+
+              wheeldelta.x += e.deltaFactor * e.deltaX;
+              wheeldelta.y += e.deltaFactor * e.deltaY;
+
+              });
+
+                // $(window).mousewheel(function(event, delta) {
+                //    if (event.deltaY < 0) {
+                //      topS()
+                //
+                //      return
+                //    } else if (event.deltaY > 0) {
+                //      botS()
+                //
+                //    }
+                // });
                 this.clickFn = (slide) => {
                     if ( slide.isPositionedRight() ) {
                         this.navigate('next'); // после

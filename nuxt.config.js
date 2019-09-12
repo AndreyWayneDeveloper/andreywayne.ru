@@ -36,7 +36,7 @@ module.exports = {
       { name:"DC.Rights", content: "Andrey Wayne" }
     ],
     link: [
-      { rel: 'shortcut icon', type:'image/png', href: 'favicon.png' }
+      { rel: 'shortcut icon', type:'image/png', href: '/img/favicon.png' }
     ]
   },
   script: [

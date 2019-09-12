@@ -20,6 +20,8 @@
     "images-loaded": "^1.0.0",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.4.1",
+    "jquery-browserify": "^1.8.1",
+    "jquery-mousewheel": "^3.1.13",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "nearby": "0.0.3",

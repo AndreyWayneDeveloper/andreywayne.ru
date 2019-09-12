@@ -70,6 +70,7 @@
       </div>
     </section>
     </div>
+    <Preloader></Preloader>
   </main>
 </template>
 
@@ -83,6 +84,7 @@ import $ from 'jquery'
 import Logo from '~/components/elements/Logo'
 import Menu from '~/components/elements/Menu'
 import InfoMe from '~/components/elements/InfoMe'
+import Preloader from '~/components/elements/Preloader'
 // console.log(Nearby)
 // console.log(TweenMax)
 // <div class="content">
@@ -106,7 +108,8 @@ export default {
   components: {
     Logo,
     Menu,
-    InfoMe
+    InfoMe,
+    Preloader
   },
   mounted() {
     $(window).ready(() => {
