@@ -10,6 +10,7 @@ div
         :index='i + 1'
         :title='item.title'
         :subtitle='item.subtitle'
+        :image='item.image'
       )
       NavPrev
       NavNext

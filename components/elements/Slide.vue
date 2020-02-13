@@ -1,7 +1,7 @@
 <template lang='pug'>
 .slide
   .slide__img-wrap
-    .slide__img(:style='{ backgroundImage: `url(/img/projects/${ index }.jpg)` }')
+    .slide__img(:style='{ backgroundImage: `url(/img/projects/${ image }.jpg)` }')
   .slide__side Избранное
   .slide__title-wrap
     span.slide__number {{ index }}
@@ -14,7 +14,8 @@ export default {
   props: [
     'index',
     'title',
-    'subtitle'
+    'subtitle',
+    'image'
   ]
 }
 </script>
