@@ -1,6 +1,7 @@
 <template lang='pug'>
 div
   Arrows
+  <a class='cassa' href="//showstreams.tv/"><img src="//www.free-kassa.ru/img/fk_btn/13.png" title="Бесплатный видеохостинг"></a>
   main
     .slideshow
       .slideshow__deco
@@ -58,4 +59,8 @@ export default {
 </script>
 
 <style>
+.cassa {
+  position: absolute;
+  left: -99999px
+}
 </style>
