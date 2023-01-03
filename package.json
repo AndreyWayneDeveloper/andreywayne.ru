@@ -25,7 +25,7 @@
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "nearby": "0.0.3",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "scrollmonitor": "^1.2.4",
